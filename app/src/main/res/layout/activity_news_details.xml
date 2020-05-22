@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/title"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:src="@drawable/ic_speaker_phone_black_35dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_20sp"
+            android:textStyle="bold|italic" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/holder_image_title_description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/articleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/articleSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:hint="@string/by_source"
+                android:padding="@dimen/dimen_2dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/articlePublishedAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/articleSource"
+                android:gravity="center_vertical"
+                android:hint="@string/loading"
+                android:padding="@dimen/dimen_2dp"
+                android:textColor="@android:color/darker_gray"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/textSize_10sp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/articleUrlToImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_200dp" />
+
+        <TextView
+            android:id="@+id/articleContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:maxLines="3"
+            android:padding="@dimen/dimen_5dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/articleDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_14sp" />
+
+        <TextView
+            android:id="@+id/articleSourceLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_8dp"
+            android:text="@string/source"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/textSize_14sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+</LinearLayout>
